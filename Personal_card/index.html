@@ -5,59 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Card</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background-color: rgba(0, 0, 0, 0.849);
-      }
-      .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        font-weight: bold;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.227);
-        backdrop-filter: blur(20px);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 500px;
-        width: 300px;
-      }
-      .card img {
-        border-radius: 50%;
-        object-fit: cover;
-      }
-      .location {
-        color: yellowgreen;
-      }
-      button {bg-[rgba(0, 0, 0, 0.347)]
-        background-color: rgba(0, 0, 0, 0.347);
-        border-radius: 0.4em;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 0.7rem;
-        width: 97%;
-        color: #fff;
-      }
-      .description {
-        font-weight: normal;
-      }
-    </style> -->
   </head>
   <body class="bg-[rgba(0,0,0,0.849)]">
     <div
-      class="flex flex-col items-center gap-4 font-bold text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl w-[300px]"
+      class="bg-[rgba(0,0,0,0.227)] flex flex-col items-center gap-4 font-bold text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl w-[300px] p-6"
+      style="backdrop-filter: blur(20px)"
     >
       <figure>
         <img
@@ -69,34 +21,32 @@
         />
       </figure>
 
-      <h2 class="name text-black">Sulthanul Arief</h2>
+      <h2 class="name text-white">Sulthanul Arief</h2>
       <p class="location text-[yellowgreen]">London, United Kingdom</p>
       <p class="description"><q>Full Stack Developer</q></p>
-      <button
-        class="bg-[rgba(0, 0, 0, 0.347)] rounded-lg cursor-pointer p-[0.7rem] text-white w-[97%]"
-      >
-        Github
-      </button>
-      <button
-        class="bg-[rgba(0, 0, 0, 0.347)] rounded-lg cursor-pointer p-[0.7rem] text-white w-[97%]"
-      >
-        Front End Mentor
-      </button>
-      <button
-        class="bg-[rgba(0, 0, 0, 0.347)] rounded-lg cursor-pointer p-[0.7rem] text-white w-[97%]"
-      >
-        LinkedIn
-      </button>
-      <button
-        class="bg-[rgba(0, 0, 0, 0.347)] rounded-lg cursor-pointer p-[0.7rem] text-white w-[97%]"
-      >
-        Twitter
-      </button>
-      <button
-        class="bg-[rgba(0, 0, 0, 0.347)] rounded-lg cursor-pointer p-[0.7rem] text-white w-[97%]"
-      >
-        Instagram
-      </button>
+      <button>Github</button>
+      <button>Front End Mentor</button>
+      <button>LinkedIn</button>
+      <button>Twitter</button>
+      <button>Instagram</button>
     </div>
   </body>
+  <script>
+    const buttons = document.getElementsByTagName("button");
+
+    Array.from(buttons).forEach((btn) => {
+      btn.classList.add(
+        "bg-[rgba(0,0,0,0.347)]",
+        "rounded-lg",
+        "cursor-pointer",
+        "p-[0.7rem]",
+        "text-white",
+        "w-[97%]",
+        "hover:bg-[rgba(0,0,0,0.200)]",
+        "transition",
+        "ease-linear",
+        "duration-150"
+      );
+    });
+  </script>
 </html>
